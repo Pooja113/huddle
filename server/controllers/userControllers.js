@@ -27,7 +27,7 @@ const registerUser = asyncHandler(async (req, res) => {
 
   if (!name || !email || !password) {
     res.status(400);
-    throw new Error("Please enter all the fields");
+    throw new Error("Please Enter all the Feilds");
   }
 
   const userExists = await User.findOne({ email });
@@ -82,4 +82,4 @@ const authUser = asyncHandler(async (req, res) => {
   }
 });
 
-module.exports = { registerUser, authUser,allUsers };
+module.exports = { allUsers, registerUser, authUser };

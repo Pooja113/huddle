@@ -81,6 +81,7 @@ function SideDrawer() {
 
       setLoading(false);
       setSearchResult(data);
+    
     } catch (error) {
       toast({
         title: "Error Occured!",
@@ -141,9 +142,9 @@ function SideDrawer() {
             </Text>
           </Button>
         </Tooltip>
-        <Text fontSize="2xl" fontFamily="Work sans">
+        <div className="app__heading__chat">
           Huddle
-        </Text>
+        </div>
         <div>
           <Menu>
             <MenuButton p={1}>
@@ -211,7 +212,7 @@ function SideDrawer() {
                 <UserListItem
                   key={user._id}
                   user={user}
-                  handleFunction={() => accessChat(user._id)}
+                  handleFunction={() => accessChat(user)}
                 />
               ))
             )}
